@@ -56,11 +56,11 @@ script = ExtResource( 3 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Church/Area2D2"]
 polygon = PoolVector2Array( -168, 72, 72, 72, 80, -32, 56, -184, 0, -72, -160, -56, -184, 8, -160, 0 )
-[connection signal="mouse_entered" from="House/Area2D3" to="House/Area2D3" method="_on_Area2D_mouse_entered"]
 [connection signal="mouse_entered" from="House/Area2D3" to="House" method="_on_Area2D3_mouse_entered"]
-[connection signal="mouse_exited" from="House/Area2D3" to="House/Area2D3" method="_on_Area2D_mouse_exited"]
+[connection signal="mouse_entered" from="House/Area2D3" to="House/Area2D3" method="_on_Area2D_mouse_entered"]
 [connection signal="mouse_exited" from="House/Area2D3" to="House" method="_on_Area2D3_mouse_exited"]
-[connection signal="mouse_entered" from="Church/Area2D2" to="Church/Area2D2" method="_on_Area2D2_mouse_entered"]
+[connection signal="mouse_exited" from="House/Area2D3" to="House/Area2D3" method="_on_Area2D_mouse_exited"]
 [connection signal="mouse_entered" from="Church/Area2D2" to="Church" method="_on_Area2D2_mouse_entered"]
-[connection signal="mouse_exited" from="Church/Area2D2" to="Church/Area2D2" method="_on_Area2D2_mouse_exited"]
+[connection signal="mouse_entered" from="Church/Area2D2" to="Church/Area2D2" method="_on_Area2D2_mouse_entered"]
 [connection signal="mouse_exited" from="Church/Area2D2" to="Church" method="_on_Area2D2_mouse_exited"]
+[connection signal="mouse_exited" from="Church/Area2D2" to="Church/Area2D2" method="_on_Area2D2_mouse_exited"]
