@@ -10,8 +10,10 @@ var motion = Vector2(0,0)
 var screen_size
 var screen_buffer = 8
 
+
 func _ready():
 	screen_size = get_viewport_rect().size
+
 
 func _process(delta):
 	if Input.is_action_pressed("ui_left"):
@@ -30,3 +32,13 @@ func _process(delta):
 	
 	position.x = wrapf(position.x, -screen_buffer, screen_size.x + screen_buffer)
 	position.y = wrapf(position.y, -screen_buffer, screen_size.y + screen_buffer)
+
+
+
+func _on_Hitbox_area_entered(area):
+	if area.is_in_group("ironMeteor"):
+		get_tree().get_current_scene().get_node("UserInterface/userInterface").visible = true
+		get_tree().paused = true
+		Global.score += 1
+		area.damage(1)
+		print(Global.score)

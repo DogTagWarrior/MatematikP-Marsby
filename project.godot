@@ -19,6 +19,10 @@ config/name="Matematik P- Marsby"
 run/main_scene="res://Main world.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Global.tscn"
+
 [display]
 
 window/size/width=1280
