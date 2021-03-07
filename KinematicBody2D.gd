@@ -39,6 +39,6 @@ func _on_Hitbox_area_entered(area):
 	if area.is_in_group("ironMeteor"):
 		get_tree().get_current_scene().get_node("UserInterface/userInterface").visible = true
 		get_tree().paused = true
-		Global.score += 1
+		Global.score += 5
 		area.damage(1)
 		print(Global.score)
