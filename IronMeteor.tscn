@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://IronMeteor.gd" type="Script" id=1]
+[ext_resource path="res://Billeder/meteor2.png" type="Texture" id=2]
+
+[node name="IronMeteor" type="Area2D" groups=[
+"Meteor",
+]]
+position = Vector2( 715.474, 245.611 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -0.509521, 47.8711, 19.0903, 49.2075, 31.5629, 45.6439, 38.6901, 37.1803, 41.3628, 26.0441, 48.4899, 13.126, 49.3809, 6.44431, 43.1445, -7.81007, 33.7901, -21.1736, 26.663, -35.8734, 14.6357, -45.6733, -1.40039, -47.9005, -14.7639, -47.4551, -26.791, -38.5461, -36.1454, -28.3008, -46.8362, -14.4918, -53.5179, -0.237427, -59.3088, 16.2442, -59.3088, 38.0712, -47.7271, 42.0803, -31.6909, 42.0803, -22.3365, 46.5347 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

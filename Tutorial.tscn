@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Font16.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Billeder/arrow-keys-11550121442rnetostces.png" type="Texture" id=2]
+[ext_resource path="res://tutorial.gd" type="Script" id=3]
+
+[node name="Tutorial" type="Node"]
+
+[node name="tutorial" type="Control" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="tutorial"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -96.0
+margin_top = -264.0
+margin_right = 91.0
+margin_bottom = -105.0
+custom_fonts/font = ExtResource( 1 )
+text = "Styr med piletasterne
+Undgå de sorte meteor
+Flyv ind i de gule meteor
+og svar på spørgsmål
+Efter man har svaret 3 
+rigtige, så har man vundet"
+align = 1
+
+[node name="TextureRect" type="TextureRect" parent="tutorial"]
+margin_left = 568.0
+margin_top = 280.0
+margin_right = 704.0
+margin_bottom = 434.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Button" type="Button" parent="tutorial"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -64.0
+margin_top = -240.0
+margin_right = 41.0
+margin_bottom = -210.0
+custom_fonts/font = ExtResource( 1 )
+text = "Start Spillet"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="tutorial/Button" to="tutorial" method="_on_Button_pressed"]

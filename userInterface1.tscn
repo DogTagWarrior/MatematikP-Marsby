@@ -1,0 +1,93 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Font20.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Font16.tres" type="DynamicFont" id=2]
+[ext_resource path="res://userInterface.gd" type="Script" id=3]
+[ext_resource path="res://Billeder/Spørgsmål1.png" type="Texture" id=4]
+
+[node name="userInterface" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpørgsmålMenu" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0, 0, 0, 0.247059 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="SpørgsmålMenu"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -56.0
+margin_top = 168.0
+margin_right = 46.0
+margin_bottom = 198.0
+custom_fonts/font = ExtResource( 1 )
+text = "Spørgsmål"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="SpørgsmålMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -176.0
+margin_top = -152.0
+margin_right = 176.0
+margin_bottom = -128.0
+custom_fonts/font = ExtResource( 2 )
+text = "Hvilken af de to grafer A eller B er grafen for f'."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="A" type="Button" parent="SpørgsmålMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -8.0
+margin_top = 120.0
+margin_right = 13.0
+margin_bottom = 140.0
+custom_fonts/font = ExtResource( 2 )
+text = "A"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B" type="Button" parent="SpørgsmålMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -8.0
+margin_top = 168.0
+margin_right = 13.0
+margin_bottom = 188.0
+custom_fonts/font = ExtResource( 2 )
+text = "B"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="SpørgsmålMenu"]
+margin_left = 248.0
+margin_top = 240.0
+margin_right = 1052.0
+margin_bottom = 455.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="SpørgsmålMenu/A" to="." method="_on_A_pressed"]
+[connection signal="pressed" from="SpørgsmålMenu/B" to="." method="_on_B_pressed"]
